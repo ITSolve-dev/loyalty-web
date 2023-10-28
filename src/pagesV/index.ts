@@ -1,5 +1,5 @@
-import { ClientDashboardPage } from "./dashboard/ClientDashboardPage";
-import { EmployeeDashboardPage } from "./dashboard/EmployeeDashboardPage";
-import { OwnerDashboardPage } from "./dashboard/OwnerDashboardPage";
+import DashboardPage from './dashboard/DashboardPage';
+import DetailedInstitutionPage from './institutions/DetailedInstitutionPage';
+import ProfilePage from './profile/ProfilePage';
 
-export { ClientDashboardPage, EmployeeDashboardPage, OwnerDashboardPage };
+export { DashboardPage, DetailedInstitutionPage, ProfilePage };

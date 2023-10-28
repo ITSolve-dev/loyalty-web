@@ -1,1 +1,3 @@
-export { default as QRScanner } from "./QRScanner";
+import QRScanner from './QRScanner';
+
+export { QRScanner };

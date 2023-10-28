@@ -1,0 +1,16 @@
+.schedule-card {
+  &__title-wrapper {
+    margin-left: 4px;
+  }
+
+  &__card-wrapper {
+    &__card {
+      padding: 12px 43px;
+      background: #f2f2f6 !important;
+    }
+  }
+}
+
+.marked {
+  color: #fb2f2f;
+}

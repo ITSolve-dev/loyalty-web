@@ -1,9 +1,10 @@
-import {
-  ClientDashboardPage,
-  EmployeeDashboardPage,
-  OwnerDashboardPage,
-} from "@/pagesV";
+'use client';
+import { FC } from 'react';
 
-export default async function DashboardPage() {
-  return <EmployeeDashboardPage />;
-}
+import { DashboardPage } from '@/pagesV';
+
+const Dashboard: FC = () => {
+  return <DashboardPage />;
+};
+
+export default Dashboard;

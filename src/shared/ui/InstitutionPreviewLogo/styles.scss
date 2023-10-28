@@ -1,0 +1,9 @@
+.institution-preview-logo {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 120.9%), linear-gradient(0deg, #e7e7e7, #e7e7e7);
+  width: 100%;
+
+  height: clamp(140px, 160px, 180px);
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
