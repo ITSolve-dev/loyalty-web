@@ -4,7 +4,7 @@ import { FC } from 'react';
 import { Button, Typography } from '@mui/material';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
-const AddingViaPhone: FC = () => {
+const AddPointsViaPhone: FC = () => {
   return (
     <Button
       color="secondary"
@@ -21,4 +21,4 @@ const AddingViaPhone: FC = () => {
   );
 };
 
-export default AddingViaPhone;
+export default AddPointsViaPhone;

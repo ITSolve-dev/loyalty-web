@@ -1,8 +1,7 @@
 'use client';
 import { FC, ReactNode, useMemo, MouseEvent } from 'react';
 
-import { OverridableComponent } from '@mui/material/OverridableComponent';
-import { Typography, Stack, SvgIconTypeMap } from '@mui/material';
+import { Typography, Stack } from '@mui/material';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import PhoneIcon from '@mui/icons-material/Phone';
 import PlaceIcon from '@mui/icons-material/Place';
@@ -18,7 +17,7 @@ type ContactProps = {
   onClick?: (event: MouseEvent<HTMLDivElement>) => void;
 };
 
-const configIcons: Record<ContactType, OverridableComponent<SvgIconTypeMap<{}, 'svg'>> & { muiName: string }> = {
+const configIcons = {
   instagram: InstagramIcon,
   facebook: FacebookIcon,
   phone: PhoneIcon,

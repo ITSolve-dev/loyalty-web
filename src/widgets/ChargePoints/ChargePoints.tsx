@@ -2,7 +2,7 @@
 import { FC } from 'react';
 
 import { Stack, Typography } from '@mui/material';
-import { AddPoint } from '@/features';
+import { AddPointsViaQR, AddPointsViaPhone } from '@/features';
 
 const ChargePoints: FC = () => {
   return (
@@ -10,8 +10,8 @@ const ChargePoints: FC = () => {
       <Typography variant="h4" fontWeight={590}>
         Начислить баллы
       </Typography>
-      <AddPoint type="qr" />
-      <AddPoint type="phone" />
+      <AddPointsViaQR />
+      <AddPointsViaPhone />
     </Stack>
   );
 };

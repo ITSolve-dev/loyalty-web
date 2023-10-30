@@ -1,5 +1,5 @@
 'use client';
-import { useMemo, MouseEvent } from 'react';
+import { MouseEvent } from 'react';
 import { Paper, InputBase, IconButton, InputBaseProps, Grid } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import CloseIcon from '@mui/icons-material/Close';

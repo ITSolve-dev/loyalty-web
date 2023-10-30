@@ -9,7 +9,7 @@ type DetailedInstitutionProps = {
   };
 };
 
-const DetailedInstitution: FC<DetailedInstitutionProps> = ({ params }) => {
+const DetailedInstitution: FC<DetailedInstitutionProps> = () => {
   return <DetailedInstitutionPage />;
 };
 

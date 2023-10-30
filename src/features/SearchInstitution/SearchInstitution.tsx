@@ -2,7 +2,7 @@
 import { FC, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 
-import { Grid, Typography, Button, Container } from '@mui/material';
+import { Grid, Typography, Button } from '@mui/material';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 import { InstitutionToCustomerCard, SearchListItems } from '@/shared/ui';
@@ -10,7 +10,7 @@ import { InstitutionToCustomerCard, SearchListItems } from '@/shared/ui';
 const SearchInstitution: FC = () => {
   const router = useRouter();
 
-  const handleRoute = useCallback(() => router.push('/institutions/1'), []);
+  const handleRoute = useCallback(() => router.push('/institutions/1'), [router]);
 
   return (
     <Grid container rowGap={4}>

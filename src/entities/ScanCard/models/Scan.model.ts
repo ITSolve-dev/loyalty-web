@@ -1,6 +1,5 @@
 export interface Scan {
-  date: string;
+  id: number;
+  createdAt: string;
   amount: number;
-  income: boolean;
-  institution: string;
 }

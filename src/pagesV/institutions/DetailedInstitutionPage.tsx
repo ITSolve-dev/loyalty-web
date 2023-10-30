@@ -3,7 +3,7 @@ import { FC } from 'react';
 
 import { Divider, Paper, Typography, Stack } from '@mui/material';
 
-import { InstitutionPreviewLogo, Contact, QR } from '@/shared/ui';
+import { InstitutionPreviewLogo, Contact } from '@/shared/ui';
 import { InstitutionSchedule } from '@/features';
 import { InstitutionMenu } from '@/widgets';
 

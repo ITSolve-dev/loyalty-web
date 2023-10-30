@@ -1,5 +1,6 @@
 export { ActivityStatistic } from './ActivityStatistic';
-export { AddPoint } from './AddPoint';
+export { AddPointsViaPhone } from './AddPointsViaPhone';
+export { AddPointsViaQR } from './AddPointsViaQR';
 export { InstitutionCarousel } from './InstitutionCarousel';
 export { InstitutionMenuList } from './InstitutionMenuList';
 export { InstitutionSchedule } from './InstitutionSchedule';

@@ -16,7 +16,7 @@ type SearchListItemsProps = {
 };
 
 const SearchListItems: FC<SearchListItemsProps> = ({ children, title }) => {
-  const items = useMemo((): ReactNode[] => (Array.isArray(children) ? children : [children]), []);
+  const items = useMemo((): ReactNode[] => (Array.isArray(children) ? children : [children]), [children]);
 
   return (
     <Grid container direction="column" alignItems="flex-start" justifyContent="center" rowGap={8}>

@@ -2,13 +2,11 @@
 import { FC, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 
-import { Typography, Grid, Box } from '@mui/material';
+import { Typography, Grid } from '@mui/material';
 
 import { InstitutionToCustomerCard, Carousel } from '@/shared/ui';
 
-type InstitutionCarouselProps = {};
-
-const InstitutionCarousel: FC<InstitutionCarouselProps> = (props) => {
+const InstitutionCarousel: FC = () => {
   const router = useRouter();
 
   const handleRoute = useCallback(() => router.push('/institutions/1'), [router]);

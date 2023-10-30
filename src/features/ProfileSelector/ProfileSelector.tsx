@@ -6,66 +6,13 @@ import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
 import StorefrontOutlinedIcon from '@mui/icons-material/StorefrontOutlined';
 
 import { LinkedButton } from '@/shared/ui';
+import { useUserStore } from '@/shared/stores';
 
 import AddInstitutionCard from './AddInstitutionCard';
 
-type Profile = {
-  id: number;
-  institution: string;
-  role: string;
-};
-
-const config1: Profile[] = [
-  {
-    id: 1,
-    institution: 'Cafe name 1',
-    role: 'владелец',
-  },
-  {
-    id: 2,
-    institution: 'Cafe name 2',
-    role: 'сотрудник',
-  },
-];
-
-const config2: Profile[] = [];
-
-const config3: Profile[] = [
-  {
-    id: 1,
-    institution: 'Cafe name 1',
-    role: 'владелец',
-  },
-  {
-    id: 2,
-    institution: 'Cafe name 2',
-    role: 'сотрудник',
-  },
-  {
-    id: 3,
-    institution: 'Cafe name 3',
-    role: 'владелец',
-  },
-  {
-    id: 4,
-    institution: 'Cafe name 4',
-    role: 'сотрудник',
-  },
-  {
-    id: 5,
-    institution: 'Cafe name 5',
-    role: 'владелец',
-  },
-  {
-    id: 6,
-    institution: 'Cafe name 6',
-    role: 'сотрудник',
-  },
-];
-
 const ProfileSelector: FC = () => {
+  const { profiles } = useUserStore();
   const [open, setOpen] = useState<boolean>(false);
-  const accounts = config1;
 
   const handleOpen = useCallback(() => setOpen(true), []);
   const handleClose = useCallback(() => setOpen(false), []);
@@ -73,30 +20,31 @@ const ProfileSelector: FC = () => {
   return (
     <Stack spacing={8} flexGrow={1}>
       <Stack spacing={4}>
-        {accounts.length > 0 && (
+        {profiles && profiles.length > 0 && (
           <Typography variant="body2" sx={{ opacity: 0.6 }}>
             Аккаунты
           </Typography>
         )}
         {/* TODO: Remove inline styles */}
         <Stack direction="column" spacing={4} maxHeight={150} sx={{ overflow: 'scroll' }}>
-          {accounts.map((config) => (
-            <LinkedButton key={config.id} startAddon={<StorefrontOutlinedIcon />}>
-              <Stack direction="row" spacing={4}>
-                <Typography variant="body2" fontWeight={590}>
-                  {config.institution}
-                </Typography>
-                <Typography variant="body2" sx={{ opacity: 0.5 }}>
-                  • {config.role}
-                </Typography>
-              </Stack>
-            </LinkedButton>
-          ))}
+          {profiles &&
+            profiles.map((profile) => (
+              <LinkedButton key={profile.id} startAddon={<StorefrontOutlinedIcon />}>
+                <Stack direction="row" spacing={4}>
+                  <Typography variant="body2" fontWeight={590}>
+                    {profile.user.username}
+                  </Typography>
+                  <Typography variant="body2" sx={{ opacity: 0.5 }}>
+                    • {profile.role}
+                  </Typography>
+                </Stack>
+              </LinkedButton>
+            ))}
         </Stack>
       </Stack>
       <Button color="primary" variant="contained" startIcon={<AddOutlinedIcon />} sx={{ p: 10 }} onClick={handleOpen}>
         <Typography variant="body2" fontWeight={590}>
-          {accounts.length > 0 ? 'Добавить новое заведение' : 'Подключить свое заведение'}
+          {profiles && profiles.length > 0 ? 'Добавить новое заведение' : 'Подключить свое заведение'}
         </Typography>
       </Button>
       <Modal open={open} onClose={handleClose}>

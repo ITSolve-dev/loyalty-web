@@ -11,7 +11,7 @@ type ScanCardProps = {
 };
 
 const ScanCard: FC<ScanCardProps> = ({ scan }) => {
-  const sign = useMemo(() => (scan.income ? '+' : '-'), [scan]);
+  const sign = useMemo(() => (scan.amount > 0 ? '+' : '-'), [scan]);
 
   return (
     <Paper elevation={0} sx={{ p: '8px 24px 8px 8px', width: '100%' }}>
@@ -21,8 +21,8 @@ const ScanCard: FC<ScanCardProps> = ({ scan }) => {
         </Grid>
         <Grid item xs container>
           <Stack spacing={0}>
-            <Typography variant="body2">{scan.institution}</Typography>
-            <Typography variant="caption">{scan.date}</Typography>
+            {/* <Typography variant="body2">{scan.institution}</Typography> */}
+            <Typography variant="caption">{new Date(scan.createdAt).toLocaleString()}</Typography>
           </Stack>
         </Grid>
         <Grid item>

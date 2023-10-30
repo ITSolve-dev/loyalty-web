@@ -3,7 +3,7 @@ import { FC } from 'react';
 
 import { Stack, Paper, Typography, Button } from '@mui/material';
 
-import { ProfileCard } from '@/entities/ProfileCard';
+import { ProfileCard } from '@/entities/Profile';
 
 const AddInstitutionCard: FC = () => {
   return (

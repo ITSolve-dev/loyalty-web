@@ -1,3 +1,3 @@
-import { ThemeRegistry } from "./ThemeRegistry";
+import { ThemeRegistry } from './ThemeRegistry';
 
 export { ThemeRegistry };

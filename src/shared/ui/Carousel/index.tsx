@@ -13,8 +13,8 @@ export interface CarouselProps {
 const Carousel: FC<CarouselProps> = ({ children }) => {
   return Array.isArray(children) ? (
     <Swiper freeMode modules={[FreeMode]} spaceBetween={10} className="carousel-swiper">
-      {children.map((child) => (
-        <SwiperSlide>{child}</SwiperSlide>
+      {children.map((child, index) => (
+        <SwiperSlide key={index}>{child}</SwiperSlide>
       ))}
     </Swiper>
   ) : (

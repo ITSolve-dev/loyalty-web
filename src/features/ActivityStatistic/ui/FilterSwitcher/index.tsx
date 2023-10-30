@@ -16,10 +16,10 @@ const FilterSwitcher: FC = () => {
   );
   return (
     <ToggleButtonGroup color="primary" size="small" fullWidth exclusive value={filter} onChange={handleSwitch}>
-      {filterConfig.map((filter) => (
-        <ToggleButton value={filter.value}>
+      {filterConfig.map((config, index) => (
+        <ToggleButton key={index} value={config.value}>
           <Typography variant="caption" fontWeight={590}>
-            {filter.title}
+            {config.title}
           </Typography>
         </ToggleButton>
       ))}
